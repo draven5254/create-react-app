@@ -1,14 +1,15 @@
 function ListGroup() {
+  const items = ["Antipolo", "Masinag", "Marikina", "Robinson", "Sta.Lu"];
+
   return (
-    <ul className="list-group">
-      <li className="list-group-item active" aria-current="true">
-        An active item
-      </li>
-      <li className="list-group-item">item one </li>
-      <li className="list-group-item">item two</li>
-      <li className="list-group-item">item three</li>
-      <li className="list-group-item">item four</li>
-    </ul>
+    <>
+      <h1>This is a List</h1>
+      <ul className="list-group">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </>
   );
 }
 
